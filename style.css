@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "Work Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    src: 
+        url('assets/fonts/WorkSans-VariableFont_wght.ttf') format(truetype),
+        url('assets/fonts/WorkSans-VariableFont_wght.ttf') format(truetype);
+}
+
+:root {
+    --ff : "Work Sans", sans-serif;
+    --fw-light : 400;
+    --fw-regular : 600;
+    --fw-bold : 700;
+    --fs-paragraph: 1.6rem;
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-pink: hsl(275, 100%, 97%);
+    --clr-grayish-purple: hsl(292, 16%, 49%);
+    --clr-dark-purple: hsl(292, 42%, 14%);
+}
+
+body {
+    font-family: var(--ff);
+    background-color: var(--clr-light-pink);
+    background-image: url(assets/images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% auto;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    line-height: 1.5;
+}
+
+.card-container {
+    max-width: clamp(33rem, 23.4930rem + 25.3521vw, 50rem);
+    background-color: var(--clr-white);
+    border-radius: 2rem;
+    padding: 2.2rem;
+}
+
+.card {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+img{
+    width: 2.5rem;
+    height: auto;
+}
+
+h2{
+    line-height: 2rem;
+    /* font-size: 1.5rem; */
+    font-size: clamp(1.5rem, 1.3944rem + 0.2817vw, 1.8rem);
+}
+
+.answer {
+    font-size: clamp(1.2rem, 1.1296rem + 0.1878vw, 1.4rem);
+    padding-top: 2rem;
+    color: var(--clr-grayish-purple);
+    font-weight: var(--fw-regular);
+    opacity: .6;
+}
+
+.open {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+main {
+    padding-block: 10rem;
+}
+
+.title {
+    font-size: clamp(2.4rem, 2.2239rem + 0.4695vw, 2.9rem);
+    font-weight: var(--fw-bold);
+}
+
+.faq-divider {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Light, subtle line */
+    margin: 2rem 1rem;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    align-items: center; /* Center vertically */
+}
+
+
+.faq {
+    cursor: pointer;
+}
+
+.faq:hover {
+    color:hsl(281, 83%, 54%);
+}
+
+footer {
+    font-size: 11px; 
+    text-align: center;
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width: 60rem) {
+    body {
+        background-image: url(assets/images/background-pattern-desktop.svg);
+    }
+}
